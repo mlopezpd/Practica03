@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-default col-md-2 col-md-offset-5" Text="Guardar" />
+                                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-default col-md-2 col-md-offset-5" Text="Guardar" OnClick="btnAdd_Click" />
                                 </div>
                                 
                             </div>
