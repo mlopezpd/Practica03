@@ -19,6 +19,20 @@ namespace Practica03
                 this.GridView1.DataSource = curso.GetAll();
                 this.GridView1.DataBind();
             }
+
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            Course c = new Course();
+            c.CourseID = Convert.ToInt32 (this.txtID.Text);
+            c.Title = this.txtTitle.Text;
+            c.Credits = Convert.ToInt32(this.txtCredits.Text);
+            c.DepartmentID = Convert.ToInt32(this.DropDownList1.SelectedValue);
+
+            CourseManager.Add(c);
+            Response.Redirect("Course.aspx");
         }
     }
 }
