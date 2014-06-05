@@ -187,6 +187,9 @@
       <DependentUpon>Modelo.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\CourseManager.cs" />
+    <Compile Include="Models\ICourseManager.cs" />
+    <Compile Include="Models\IPersonManager.cs" />
+    <Compile Include="Models\PersonManager.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
