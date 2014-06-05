@@ -46,17 +46,88 @@ namespace Practica03.Models
         /// <returns>El curso buscado.</returns>
         public Course Get(int ID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Course c = new Course();
+
+                using (School bd = new School())
+                {
+                    var resultado = from curso in bd.Courses
+                                    where curso.CourseID == ID
+                                    select curso;
+                }
+                return c;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
 
+        /// <summary>
+        /// Añade un curso a la base de datos.
+        /// </summary>
+        /// <param name="c">El curso que se quiere añadir.</param>
+        /// <returns>True o false si se ha podido añadir o no</returns>
         public bool Add(Course c)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (School bd = new School())
+                {
+                    bd.Courses.Add(c);
+                    bd.SaveChanges();
+                }
+                return true;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
 
+        /// <summary>
+        /// Elimina un curso de la base de datos.
+        /// </summary>
+        /// <param name="id">ID del curso que se desea eliminar.</param>
+        /// <returns>True o false si se ha podido eliminar o no.</returns>
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (School bd = new School())
+                {
+                    var resultado = from curso in bd.Courses
+                                    where curso.CourseID == id
+                                    select curso;
+                    Course c = resultado.First();
+                    bd.Courses.Remove(c);
+                    bd.SaveChanges();
+                }
+                return true;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
     }
 }
