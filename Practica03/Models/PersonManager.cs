@@ -7,13 +7,13 @@ using System.Web;
 
 namespace Practica03.Models
 {
-    public class PersonManager: IPersonManager
+    public class PersonManager
     {
         /// <summary>
         /// Devuelve una lista con todos las personas de la base de datos.
         /// </summary>
         /// <returns>Lista con todos las personas.</returns>
-        public List<Person> GetAll()
+        public static List<Person> GetAll()
         {
             try
             {
@@ -44,7 +44,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="ID">ID de la persona a buscar.</param>
         /// <returns>La persona buscada.</returns>
-        public Person Get(int ID)
+        public static Person Get(int ID)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="p">La persona que se quiere añadir.</param>
         /// <returns>True o false si se ha podido añadir o no</returns>
-        public bool Add(Person p)
+        public static bool Add(Person p)
         {
             try
             {
@@ -102,7 +102,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="id">ID de la persona que se desea eliminar.</param>
         /// <returns>True o false si se ha podido eliminar o no.</returns>
-        public bool Remove(int id)
+        public static bool Remove(int id)
         {
             try
             {
