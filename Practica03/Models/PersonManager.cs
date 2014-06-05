@@ -44,18 +44,58 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="ID">ID de la persona a buscar.</param>
         /// <returns>La persona buscada.</returns>
-        public Course Get(int ID)
+        public Person Get(int ID)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Person p = new Person();
+
+                using (School bd = new School())
+                {
+                    var resultado = from persona in bd.People
+                                    where persona.PersonID == ID
+                                    select persona;
+                    p = resultado.First();
+                }
+                return p;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
         /// <summary>
         /// Añade una persona a la base de datos.
         /// </summary>
-        /// <param name="c">La persona que se quiere añadir.</param>
+        /// <param name="p">La persona que se quiere añadir.</param>
         /// <returns>True o false si se ha podido añadir o no</returns>
-        public bool Add(Person c)
+        public bool Add(Person p)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (School bd = new School())
+                {
+                    bd.People.Add(p);
+                    bd.SaveChanges();
+                }
+                return true;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
         /// <summary>
         /// Elimina una persona de la base de datos.
@@ -64,7 +104,29 @@ namespace Practica03.Models
         /// <returns>True o false si se ha podido eliminar o no.</returns>
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (School bd = new School())
+                {
+                    var resultado = from persona in bd.People
+                                    where persona.PersonID == id
+                                    select persona;
+                    Person p = resultado.First();
+                    bd.People.Remove(p);
+                    bd.SaveChanges();
+                }
+                return true;
+            }
+            catch (SqlException err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
+            catch (Exception err)
+            {
+                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                throw fault;
+            }
         }
     }
 }

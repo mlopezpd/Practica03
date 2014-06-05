@@ -24,9 +24,9 @@ namespace Practica03.Models
         /// <summary>
         /// Añade una persona a la base de datos.
         /// </summary>
-        /// <param name="c">La persona que se quiere añadir.</param>
+        /// <param name="p">La persona que se quiere añadir.</param>
         /// <returns>True o false si se ha podido añadir o no</returns>
-        bool Add(Person c);
+        bool Add(Person p);
 
         /// <summary>
         /// Elimina una persona de la base de datos.
