@@ -22,31 +22,13 @@ namespace Practica03 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 control.
+        /// LblApellido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// txtID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtID;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label LblApellido;
         
         /// <summary>
         /// txtNombre control.
@@ -58,13 +40,13 @@ namespace Practica03 {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// Label3 control.
+        /// LblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label LblNombre;
         
         /// <summary>
         /// txtApellido control.
@@ -76,13 +58,13 @@ namespace Practica03 {
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
         
         /// <summary>
-        /// Label6 control.
+        /// LblFechaContrato control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label LblFechaContrato;
         
         /// <summary>
         /// txtTitulo control.
@@ -94,13 +76,13 @@ namespace Practica03 {
         protected global::System.Web.UI.WebControls.TextBox txtTitulo;
         
         /// <summary>
-        /// Label7 control.
+        /// LblFechaInscripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label LblFechaInscripcion;
         
         /// <summary>
         /// txtTituloCortesia control.
@@ -112,57 +94,12 @@ namespace Practica03 {
         protected global::System.Web.UI.WebControls.TextBox txtTituloCortesia;
         
         /// <summary>
-        /// Label8 control.
+        /// BGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-        
-        /// <summary>
-        /// txtNotas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNotas;
-        
-        /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
-        
-        /// <summary>
-        /// lbEmpleadoTerritorios control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbEmpleadoTerritorios;
-        
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// txtNumeroVentas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumeroVentas;
+        protected global::System.Web.UI.WebControls.Button BGuardar;
     }
 }
