@@ -18,7 +18,7 @@
     <header>
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" style="margin-left:35px;" href="#">Consulta de Empleados</a>
+                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Persona de Alta</a>
               
             </div>
         </div>
@@ -31,64 +31,50 @@
                 
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                Datos de Empleados
+                                Datos Persona
                             </div>
                              <div class="panel-body">
                                 <div class="form-horizontal">
+                                
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" Text="ID Empleado" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="LblApellido" runat="server" Text="LastName" CssClass="col-md-2 control-label">Apellido</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtID" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label2" runat="server" Text="Nombre" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="LblNombre" runat="server" Text="FirstName" CssClass="col-md-2 control-label">Nombre</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label3" runat="server" Text="Apellido" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="LblFechaContrato" runat="server" Text="HireDate" CssClass="col-md-2 control-label">Fecha Contrato</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitulo" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label6" runat="server" Text="Titulo" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="LblFechaInscripcion" runat="server" Text="EnrollmentDate" CssClass="col-md-2 control-label">Fecha Inscripción</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtTitulo" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtTituloCortesia" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label7" runat="server" Text="TituloCortesia" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtTituloCortesia" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label8" runat="server" Text="Notas" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtNotas" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                    <div class="form-group">
+                                  <asp:Button ID="BGuardar" CssClass="btn btn-default col-md-2 col-md-offset-5" runat="server" Text="Guardar"></asp:Button>
+
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label9" runat="server" Text="Territorios" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:ListBox ID="lbEmpleadoTerritorios" runat="server" CssClass="form-control" ReadOnly="true"></asp:ListBox>
+                                
+
+
+                               
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label4" runat="server" Text="Numero de Ventas" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtNumeroVentas" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
+                               
                             </div>
-                             </div>
-                        </div>
-                    
+                </div>
             </div>
-        </div>
+            </div>
         </form>
     </body>
     </html>
