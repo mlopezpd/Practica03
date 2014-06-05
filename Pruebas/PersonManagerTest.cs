@@ -16,8 +16,8 @@ namespace Pruebas
 
             Person p = new Person();
 
-            p.EnrollmentDate = new DateTime();
-            p.HireDate = new DateTime();
+            p.EnrollmentDate = null;
+            p.HireDate = null;
             p.FirstName = "Felipe";
             p.LastName = "González";
             PersonManager.Add(p);
@@ -27,6 +27,53 @@ namespace Pruebas
             Assert.AreEqual(elementos + 1, elementos2);
 
             PersonManager.Remove(p.PersonID);
+        }
+        [TestMethod]
+        public void GetTest()
+        {
+            Person p = null;
+            try
+            {
+                p = PersonManager.Get(444);
+            }
+            catch
+            {
+                Assert.IsNull(p);
+            }
+
+            int id = 1;
+            p = PersonManager.Get(id);
+
+            Assert.IsNotNull(p);
+            Assert.AreEqual(p.PersonID, id);
+        }
+        [TestMethod]
+        public void AddTest()
+        {
+            Person p = new Person();
+
+            p.EnrollmentDate = null;
+            p.HireDate = null;
+            p.FirstName = "Felipe";
+            p.LastName = "González";
+            bool resultado = PersonManager.Add(p);
+
+            Assert.IsTrue(resultado);
+            PersonManager.Remove(p.PersonID);
+        }
+        [TestMethod]
+        public void RemoveTest()
+        {
+            Person p = new Person();
+
+            p.EnrollmentDate = null;
+            p.HireDate = null;
+            p.FirstName = "Felipe";
+            p.LastName = "González";
+            PersonManager.Add(p);
+
+            bool resultado = PersonManager.Remove(p.PersonID);
+            Assert.IsTrue(resultado);
         }
     }
 }
