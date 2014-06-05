@@ -6,7 +6,7 @@
 <head runat="server">
    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Empleados</title>
+    <title>Cursos</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.js"></script>
@@ -18,9 +18,7 @@
     <header>
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" style="margin-left:35px;" href="#">Consulta de Empleados</a>
-              
-            </div>
+                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Cursos de Alta </a>&nbsp;</div>
         </div>
     </header>
         <div class="container-fluid">
@@ -31,63 +29,63 @@
                 
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                Datos de Empleados
+                                Datos Cursos
                             </div>
                              <div class="panel-body">
                                 <div class="form-horizontal">
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" Text="ID Empleado" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="lblCourseID" runat="server" Text="CourseID" CssClass="col-md-2 control-label">ID del Curso</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtID" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtID" runat="server" CssClass="form-control" ></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label2" runat="server" Text="Nombre" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="col-md-2 control-label">Titulo del Curso</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control" ></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label3" runat="server" Text="Apellido" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="lblCredits" runat="server" Text="Credits" CssClass="col-md-2 control-label">Creditos del Curso</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:TextBox ID="txtCredits" runat="server" CssClass="form-control" ></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label6" runat="server" Text="Titulo" CssClass="col-md-2 control-label"></asp:Label>
+                                    <asp:Label ID="lblDepartamentID" runat="server" Text="DepartamentID" CssClass="col-md-2 control-label">ID de Departamento</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtTitulo" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                                        <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="-1">Seleccione...</asp:ListItem>
+                                            <asp:ListItem Value="1">Engineering</asp:ListItem>
+                                            <asp:ListItem Value="2">English</asp:ListItem>
+                                            <asp:ListItem Value="4">Economics</asp:ListItem>
+                                            <asp:ListItem Value="7">Mathematics</asp:ListItem>
+                                        </asp:DropDownList>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="Label7" runat="server" Text="TituloCortesia" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtTituloCortesia" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-                                    </div>
+                                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-default col-md-2 col-md-offset-5" Text="Guardar" />
                                 </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label8" runat="server" Text="Notas" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtNotas" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label9" runat="server" Text="Territorios" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:ListBox ID="lbEmpleadoTerritorios" runat="server" CssClass="form-control" ReadOnly="true"></asp:ListBox>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Label ID="Label4" runat="server" Text="Numero de Ventas" CssClass="col-md-2 control-label"></asp:Label>
-                                    <div class="col-md-9">
-                                        <asp:TextBox ID="txtNumeroVentas" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
-                                    </div>
-                                </div>
+                                
                             </div>
                              </div>
                         </div>
                     
             </div>
+
+            <div class="col-md-6">
+                
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Lista de cursos
+                            </div>
+                             <div class="panel-body">
+                                 <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server"></asp:GridView>
+                             </div>
+                        </div>
+                    
+            </div>
+
         </div>
         </form>
     </body>
