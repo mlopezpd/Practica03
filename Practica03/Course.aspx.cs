@@ -13,10 +13,10 @@ namespace Practica03
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CourseManager curso = new CourseManager();
+            
             if (!this.IsPostBack)
             {
-                this.GridView1.DataSource = curso.GetAll();
+                this.GridView1.DataSource = CourseManager.GetAll();
                 this.GridView1.DataBind();
             }
 
