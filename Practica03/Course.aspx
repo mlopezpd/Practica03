@@ -6,7 +6,7 @@
 <head runat="server">
    
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Empleados</title>
+    <title>Cursos</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.js"></script>
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-default col-md-2 col-md-offset-5" Text="Guardar" />
+                                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-default col-md-2 col-md-offset-5" Text="Guardar" OnClick="btnAdd_Click" />
                                 </div>
                                 
                             </div>
@@ -72,6 +72,20 @@
                         </div>
                     
             </div>
+
+            <div class="col-md-6">
+                
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Lista de cursos
+                            </div>
+                             <div class="panel-body">
+                                 <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server"></asp:GridView>
+                             </div>
+                        </div>
+                    
+            </div>
+
         </div>
         </form>
     </body>

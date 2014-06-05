@@ -12,10 +12,10 @@ namespace Practica03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            PersonManager Person = new PersonManager();
+            
             if (!this.IsPostBack)
             {
-                this.GridView1.DataSource = Person.GetAll();
+                this.GridView1.DataSource = PersonManager.GetAll();
                 this.GridView1.DataBind();
             }
            
@@ -23,14 +23,14 @@ namespace Practica03
 
         protected void BGuardar_Click(object sender, EventArgs e)
         {
-            PersonManager Person = new PersonManager();
+            
 
             Person p = new Person();
             p.FirstName = this.txtNombre.Text;
             p.LastName = this.txtApellido.Text;
             p.HireDate = Convert.ToDateTime(this.txtHireDate.Text);
             p.EnrollmentDate = Convert.ToDateTime(this.txtEnroll.Text);
-            Person.Add(p);
+            PersonManager.Add(p);
             Response.Redirect("Person.aspx");
         }
     }
