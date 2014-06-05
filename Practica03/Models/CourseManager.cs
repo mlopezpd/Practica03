@@ -55,6 +55,7 @@ namespace Practica03.Models
                     var resultado = from curso in bd.Courses
                                     where curso.CourseID == ID
                                     select curso;
+                    c = resultado.First();
                 }
                 return c;
             }
