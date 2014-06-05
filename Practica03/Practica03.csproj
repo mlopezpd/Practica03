@@ -106,6 +106,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Person.aspx" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -198,6 +199,13 @@
     <Compile Include="Models\ICourseManager.cs" />
     <Compile Include="Models\IPersonManager.cs" />
     <Compile Include="Models\PersonManager.cs" />
+    <Compile Include="Person.aspx.cs">
+      <DependentUpon>Person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Person.aspx.designer.cs">
+      <DependentUpon>Person.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
