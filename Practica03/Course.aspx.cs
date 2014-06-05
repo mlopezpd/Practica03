@@ -24,6 +24,8 @@ namespace Practica03
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
+            if (Convert.ToInt32(this.DropDownList1.SelectedValue) == -1)
+                return;
 
             Course c = new Course();
             c.CourseID = Convert.ToInt32 (this.txtID.Text);

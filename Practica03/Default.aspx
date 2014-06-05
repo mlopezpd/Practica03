@@ -12,7 +12,7 @@
         <header>
             <div class="navbar navbar-inverse">
                 <div class="navbar-header">
-                    <a class="navbar-brand" style="margin-left:35px;" href="#">Consulta de Empleados</a>
+                    <a class="navbar-brand" style="margin-left:35px;" href="#">Consulta de Empleados/Cursos</a>
                 </div>
             </div>
         </header>
