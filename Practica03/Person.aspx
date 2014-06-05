@@ -8,8 +8,10 @@
     <title>Empleados</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap-datepicker.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,13 +38,13 @@
                                 <div class="form-horizontal">
                                 
                                 <div class="form-group">
-                                    <asp:Label ID="LblNombre" runat="server" Text="FirstName" CssClass="col-md-2 control-label">Apellido</asp:Label>
+                                    <asp:Label ID="LblNombre" runat="server" Text="FirstName" CssClass="col-md-2 control-label">Nombre</asp:Label>
                                     <div class="col-md-9">
                                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label ID="LblApellido" runat="server" Text="LastName" CssClass="col-md-2 control-label">Nombre</asp:Label>
+                                    <asp:Label ID="LblApellido" runat="server" Text="LastName" CssClass="col-md-2 control-label">Apellido</asp:Label>
                                     <div class="col-md-9">
                                         <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
@@ -50,13 +52,13 @@
                                 <div class="form-group">
                                     <asp:Label ID="LblFechaContrato" runat="server" Text="HireDate" CssClass="col-md-2 control-label">Fecha Contrato</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtHireDate" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtHireDate" runat="server" CssClass="form-control" data-provide="datepicker" data-date-format="dd/mm/yyyy"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <asp:Label ID="LblFechaInscripcion" runat="server" Text="EnrollmentDate" CssClass="col-md-2 control-label">Fecha Inscripción</asp:Label>
                                     <div class="col-md-9">
-                                        <asp:TextBox ID="txtEnroll" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtEnroll" runat="server" CssClass="form-control" data-provide="datepicker" data-date-format="dd/mm/yyyy"></asp:TextBox>
                                     </div>
                                 
                                     </div>

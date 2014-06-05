@@ -28,8 +28,33 @@ namespace Practica03
             Person p = new Person();
             p.FirstName = this.txtNombre.Text;
             p.LastName = this.txtApellido.Text;
-            p.HireDate = Convert.ToDateTime(this.txtHireDate.Text);
-            p.EnrollmentDate = Convert.ToDateTime(this.txtEnroll.Text);
+
+            DateTime fec1 = new DateTime();
+            DateTime fec2 = new DateTime();
+            if (this.txtHireDate.Text != "")
+            {
+                string[] fecha = this.txtHireDate.Text.Split('/');
+                if (fecha.Length == 3)
+                {
+                    int anio = Int32.Parse(fecha[2]);
+                    int mes = Int32.Parse(fecha[1]);
+                    int dia = Int32.Parse(fecha[0]);
+                    fec1 = new DateTime(anio, mes, dia);
+                }
+            }
+            if (this.txtEnroll.Text != "")
+            {
+                string[] fecha = this.txtEnroll.Text.Split('/');
+                if (fecha.Length == 3)
+                {
+                    int anio = Int32.Parse(fecha[2]);
+                    int mes = Int32.Parse(fecha[1]);
+                    int dia = Int32.Parse(fecha[0]);
+                    fec2 = new DateTime(anio, mes, dia);
+                }
+            }
+            p.HireDate = fec1;
+            p.EnrollmentDate = fec2;
             PersonManager.Add(p);
             Response.Redirect("Person.aspx");
         }
