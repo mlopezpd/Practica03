@@ -7,13 +7,13 @@ using System.ServiceModel;
 
 namespace Practica03.Models
 {
-    public class CourseManager:ICourseManager
+    public static class CourseManager
     {
         /// <summary>
         /// Devuelve una lista con todos los cursos de la base de datos.
         /// </summary>
         /// <returns>Lista con todos los cursos.</returns>
-        public List<Course> GetAll()
+        public static List<Course> GetAll()
         {
             try
             {
@@ -44,7 +44,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="ID">ID del curso a buscar.</param>
         /// <returns>El curso buscado.</returns>
-        public Course Get(int ID)
+        public static Course Get(int ID)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="c">El curso que se quiere añadir.</param>
         /// <returns>True o false si se ha podido añadir o no</returns>
-        public bool Add(Course c)
+        public static bool Add(Course c)
         {
             try
             {
@@ -104,7 +104,7 @@ namespace Practica03.Models
         /// </summary>
         /// <param name="id">ID del curso que se desea eliminar.</param>
         /// <returns>True o false si se ha podido eliminar o no.</returns>
-        public bool Remove(int id)
+        public static bool Remove(int id)
         {
             try
             {

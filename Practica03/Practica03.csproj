@@ -71,6 +71,7 @@
       <LastGenOutput>Modelo.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Course.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="Modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modelo.edmx</DependentUpon>
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="Course.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
