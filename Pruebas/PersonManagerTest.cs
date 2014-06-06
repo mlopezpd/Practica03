@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Practica03.Models;
 using Practica03;
 using System.Collections.Generic;
+using System.ServiceModel;
 
 namespace Pruebas
 {
@@ -10,6 +11,7 @@ namespace Pruebas
     public class PersonManagerTest
     {
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
          public void GetAllTest()
         {
             int elementos = PersonManager.GetAll().Count;
@@ -29,6 +31,7 @@ namespace Pruebas
             PersonManager.Remove(p.PersonID);
         }
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void GetTest()
         {
             Person p = null;
@@ -48,6 +51,7 @@ namespace Pruebas
             Assert.AreEqual(p.PersonID, id);
         }
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void AddTest()
         {
             Person p = new Person();
@@ -62,6 +66,7 @@ namespace Pruebas
             PersonManager.Remove(p.PersonID);
         }
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void RemoveTest()
         {
             Person p = new Person();
