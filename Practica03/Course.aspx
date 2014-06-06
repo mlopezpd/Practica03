@@ -18,13 +18,13 @@
     <header>
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Cursos de Alta </a>&nbsp;</div>
+                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Cursos de Alta </a>
+            </div>
+                <a class="navbar-brand navbar-right" style="margin-right: 50px;" href="Default.aspx">Volver</a>  
         </div>
     </header>
         <div class="container-fluid">
-           
-                
-         
+
             <div class="col-md-6">
                 
                         <div class="panel panel-primary">

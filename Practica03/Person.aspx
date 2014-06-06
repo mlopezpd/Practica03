@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Empleados</title>
+    <title>Personas</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="Content/bootstrap-datepicker3.css" rel="stylesheet" />
@@ -19,15 +19,13 @@
     <header>
         <div class="navbar navbar-inverse">
             <div class="navbar-header">
-                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Persona de Alta</a>
-              
+                <a class="navbar-brand" style="margin-left:35px;" href="#">Dar Personas de Alta </a>
             </div>
+                <a class="navbar-brand navbar-right" style="margin-right: 50px;" href="Default.aspx">Volver</a>  
         </div>
     </header>
         <div class="container-fluid">
-           
-                
-         
+
             <div class="col-md-6">
                 
                         <div class="panel panel-primary">
