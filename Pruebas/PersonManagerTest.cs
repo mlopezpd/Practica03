@@ -7,11 +7,16 @@ using System.ServiceModel;
 
 namespace Pruebas
 {
+    /// <summary>
+    /// Clase que contiene los métodos para hacer los test a la calse PersonManager
+    /// </summary>
     [TestClass]
     public class PersonManagerTest
     {
+        /// <summary>
+        /// Método para realizar test al método GetAll
+        /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
          public void GetAllTest()
         {
             int elementos = PersonManager.GetAll().Count;
@@ -30,19 +35,16 @@ namespace Pruebas
 
             PersonManager.Remove(p.PersonID);
         }
+        /// <summary>
+        /// Método para realizar test al método Get
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(FaultException))]
         public void GetTest()
         {
             Person p = null;
-            try
-            {
-                p = PersonManager.Get(444);
-            }
-            catch
-            {
-                Assert.IsNull(p);
-            }
+            p = PersonManager.Get(444);
+            Assert.IsNull(p);
 
             int id = 1;
             p = PersonManager.Get(id);
@@ -50,8 +52,10 @@ namespace Pruebas
             Assert.IsNotNull(p);
             Assert.AreEqual(p.PersonID, id);
         }
+        /// <summary>
+        /// Método para realizar test al método Add
+        /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
         public void AddTest()
         {
             Person p = new Person();
@@ -65,8 +69,10 @@ namespace Pruebas
             Assert.IsTrue(resultado);
             PersonManager.Remove(p.PersonID);
         }
+        /// <summary>
+        /// Método para realizar test al método Remove
+        /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
         public void RemoveTest()
         {
             Person p = new Person();
