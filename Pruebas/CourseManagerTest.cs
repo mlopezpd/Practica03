@@ -19,7 +19,6 @@ namespace Pruebas
         /// Método para realizar test al método GetAll
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
         public void GetAllTest()
         {
             int elementos = CourseManager.GetAll().Count;
@@ -55,7 +54,6 @@ namespace Pruebas
         /// Método para realizar test al método Add
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
         public void AddTest()
         {
             Course c = new Course();
@@ -72,7 +70,6 @@ namespace Pruebas
         /// Método para realizar test al método Remove
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FaultException))]
         public void RemoveTest()
         {
             Course c = new Course();
