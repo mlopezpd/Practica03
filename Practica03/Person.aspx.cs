@@ -29,8 +29,8 @@ namespace Practica03
             p.FirstName = this.txtNombre.Text;
             p.LastName = this.txtApellido.Text;
 
-            DateTime fec1 = new DateTime();
-            DateTime fec2 = new DateTime();
+            DateTime fec1 = new DateTime(1753,01,01); //fecha mínima que acepta el sistema
+            DateTime fec2 = new DateTime(1753,01,01);
             if (this.txtHireDate.Text != "")
             {
                 string[] fecha = this.txtHireDate.Text.Split('/');
