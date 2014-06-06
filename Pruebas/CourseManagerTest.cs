@@ -10,12 +10,16 @@ using System.ServiceModel;
 namespace Pruebas
 {
     /// <summary>
-    /// Summary description for CourseManagerTest
+    /// Clase que contiene los métodos para hacer los test a la calse CourseManager
     /// </summary>
     [TestClass]
     public class CourseManagerTest
     {
+        /// <summary>
+        /// Método para realizar test al método GetAll
+        /// </summary>
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void GetAllTest()
         {
             int elementos = CourseManager.GetAll().Count;
@@ -30,23 +34,28 @@ namespace Pruebas
 
             CourseManager.Remove(345);
         }
-
+        /// <summary>
+        /// Método para realizar test al método Get
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(FaultException))]
         public void GetTest()
         {
             Course c = new Course();
-             c = CourseManager.Get(1);
-             Assert.IsNull(c);
+            c = CourseManager.Get(1);
+            Assert.IsNull(c);
             
-
             int id = 1045;
             c = CourseManager.Get(id);
 
             Assert.IsNotNull(c);
             Assert.AreEqual(c.CourseID, id);
         }
+        /// <summary>
+        /// Método para realizar test al método Add
+        /// </summary>
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void AddTest()
         {
             Course c = new Course();
@@ -59,7 +68,11 @@ namespace Pruebas
             Assert.IsTrue(resultado);
             CourseManager.Remove(345);
         }
+        /// <summary>
+        /// Método para realizar test al método Remove
+        /// </summary>
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void RemoveTest()
         {
             Course c = new Course();

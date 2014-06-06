@@ -34,7 +34,7 @@ namespace Practica03.Models
             }
             catch (Exception err)
             {
-                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                FaultException fault = new FaultException("Error: " + err.Message, new FaultCode("GENERAL"));
                 throw fault;
             }
         }
@@ -66,7 +66,7 @@ namespace Practica03.Models
             }
             catch (Exception err)
             {
-                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                FaultException fault = new FaultException("Error: " + err.Message, new FaultCode("GENERAL"));
                 throw fault;
             }
         }
@@ -94,7 +94,7 @@ namespace Practica03.Models
             }
             catch (Exception err)
             {
-                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                FaultException fault = new FaultException("Error: " + err.Message, new FaultCode("GENERAL"));
                 throw fault;
             }
         }
@@ -126,7 +126,7 @@ namespace Practica03.Models
             }
             catch (Exception err)
             {
-                FaultException fault = new FaultException("Error SQL: " + err.Message, new FaultCode("SQL"));
+                FaultException fault = new FaultException("Error: " + err.Message, new FaultCode("GENERAL"));
                 throw fault;
             }
         }
