@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Practica03.Models;
 using Practica03;
+using System.Data.SqlClient;
+using System.ServiceModel;
 
 namespace Pruebas
 {
@@ -28,18 +30,15 @@ namespace Pruebas
 
             CourseManager.Remove(345);
         }
+
         [TestMethod]
+        [ExpectedException(typeof(FaultException))]
         public void GetTest()
         {
-            Course c = null;
-            try
-            {
-                c = CourseManager.Get(1);
-            }
-            catch
-            {
-                Assert.IsNull(c);
-            }
+            Course c = new Course();
+             c = CourseManager.Get(1);
+             Assert.IsNull(c);
+            
 
             int id = 1045;
             c = CourseManager.Get(id);
